@@ -1,4 +1,8 @@
 Guest
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <nav class="navbar navbar-inverse bg-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -11,14 +15,46 @@ Guest
       </button>
       <a class="navbar-brand" href="#">DM World</a>
     </div>
+    
+    
+    <div class="dropdown" style="margin-top: 8px; float: left">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #222; border: 0px;">Link A<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another Action</a></li>
+        <li><a href="#">Too Much Action</a></li>
+        <li><a href="#">Just Pure Destruction</a></li>
+      </ul>
+    </div>
+    
+    <div class="dropdown" style="margin-top: 8px; float: left">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #222; border: 0px;">Link B<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another Action</a></li>
+        <li><a href="#">Too Much Action</a></li>
+        <li><a href="#">Just Pure Destruction</a></li>
+      </ul>
+    </div>
+    
+    
+    <!--
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">LinkA</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home">Action</a>
+        <a href="#about">Another Action</a>
+        <a href="#contact">Something else Here</a>
+      </div>
+    </div>
+    -->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <!--<ul class="nav navbar-nav">
         <li class="active"><a href="#">LinkA <span class="sr-only">(current)</span></a></li>
-        <li class="TestDropDown"><a href="#">LinkB</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <li class="TestDropDown" onclick="myFunction()"><a href="#">LinkB</a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -36,6 +72,10 @@ Guest
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+  -->
+      
+      <!--
+      
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown">
@@ -49,6 +89,38 @@ Guest
           </ul>
         </li>
       </ul>
+      
+      -->
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+  
+
+  
+
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+  
 </nav>
