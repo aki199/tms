@@ -33,3 +33,35 @@
   </div>
 </div>
 
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Add a load
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse">
+      <div class="panel-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('#collapseOne').on('show.bs.collapse', function () {    
+    $('.panel-heading').animate({
+        backgroundColor: "#515151"
+    }, 500);   
+})
+
+$('#collapseOne').on('hide.bs.collapse', function () {    
+    $('.panel-heading').animate({
+        backgroundColor: "#00B4FF"
+    }, 500);   
+})
+  
+</script>

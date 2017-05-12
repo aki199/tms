@@ -13,7 +13,7 @@ Guest
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">DM World</a>
+      <a class="navbar-brand" href="/">DM World</a>
     </div>
     
     
@@ -27,15 +27,15 @@ Guest
       </ul>
     </div>
     
-    <div class="dropdown" style="margin-top: 8px; float: left">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #222; border: 0px;">Link B<span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another Action</a></li>
-        <li><a href="#">Too Much Action</a></li>
-        <li><a href="#">Just Pure Destruction</a></li>
+    <div class="dropdown" style="margin-top: 8px; float: right">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #222; border: 0px;">User<!--<span class="caret"></span>--></button>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li><a href="#">Help</a></li>
+        <li><%= link_to('Sign Up', new_user_registration_path) %></li>
+        <li><%= link_to('Sign In', new_user_session_path) %></li>
       </ul>
     </div>
+    
     
     
     <!--
