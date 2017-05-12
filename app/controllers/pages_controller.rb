@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def index
+    @loadboards = Loadboard.all
   end
 
   def users

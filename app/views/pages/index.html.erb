@@ -1,11 +1,35 @@
-<div class="container-fluid">
-    <div class="row" style="padding-top: 100px">
-      <div class="col-xs-12">
-          <div class="panel panel-defailt">
-            <div class="panel-body">
-                <p>some text some additional textgit</p>
-            </div>
+<div class="row" style="padding-top: 25px">
+  <div class="col-xs-12">
+      <div class="panel panel-defailt">
+        <div class="panel-body">
+               
+        <table class="table">
+            <thead>
+            <tr>
+              <th>COMPANY</th>
+              <th>DISPATCHER</th>
+              <th>DRIVER</th>
+              <th>TRUCK</th>
+              <th>TYPE</th>
+              <th>TRAILER</th>
+
+            </tr>
+            </thead>
+           <tbody>
+          <% @loadboards.each do |loadboard| %>
+            <tr>
+              <td><%= loadboard.company %></td>
+              <td><%= loadboard.dispatcher %></td>
+              <td><%= loadboard.driver %></td>
+              <td><%= loadboard.truck %></td>
+              <td><%= loadboard.load_type %></td>
+              <td><%= loadboard.trailer %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
         </div>
-      </div>
     </div>
+  </div>
 </div>
+

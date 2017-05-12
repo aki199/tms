@@ -1,0 +1,2 @@
+class Loadboard < ApplicationRecord
+end
