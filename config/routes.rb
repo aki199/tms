@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 root 'pages#index'
 
 
-  get '/users' => 'pages#users'
+  get '/user/:id' => 'pages#users'
   get '/drivers' => 'pages#drivers'
   get '/settings' => 'pages#settings'
   get '/stats' => 'pages#stats'

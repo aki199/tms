@@ -27,7 +27,7 @@ User
     </div>
     
     <div class="dropdown" style="margin-top: 8px; float: right">
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #222; border: 0px;">User<!--<span class="caret"></span>--></button>
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="background-color: #222; border: 0px;"><%= current_user.username %><span class="caret"></span></button>
       <ul class="dropdown-menu dropdown-menu-right">
         <li><a href="#">Help</a></li>
         <li><%= link_to('Edit Profile', edit_user_registration_path) %></li>

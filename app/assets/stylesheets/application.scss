@@ -17,8 +17,10 @@
 
 
 #accordion {
+    display: block;
     position: fixed;
-    bottom: 0;
+    bottom: -20px;
+    padding: 0px;
     width: 100%;    
 }
 
@@ -49,4 +51,8 @@
 .panel-title a:hover, .panel-title a:focus, .panel-title a:active {
     text-decoration: none;
     outline: none;
+}
+
+.btn-primary:hover {
+    color: red;
 }

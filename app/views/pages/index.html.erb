@@ -1,4 +1,4 @@
-<div class="row" style="padding-top: 25px">
+<div class="row">
   <div class="col-xs-12">
       <div class="panel panel-defailt">
         <div class="panel-body">
@@ -6,26 +6,28 @@
         <table class="table">
             <thead>
             <tr>
-              <th>COMPANY</th>
-              <th>DISPATCHER</th>
-              <th>DRIVER</th>
-              <th>TRUCK</th>
-              <th>TYPE</th>
-              <th>TRAILER</th>
+              <th><a href="?company">COMPANY <span class="caret"></span></a></th>
+              <th><a>DISPATCHER <span class="caret"></span></a></th>
+              <th><a>DRIVER <span class="caret"></span></a></th>
+              <th><a href="?truck">TRUCK <span class="caret"></span></a></th>
+              <th><a>TYPE <span class="caret"></span></a></th>
+              <th><a>TRAILER <span class="caret"></span></a></th>
 
             </tr>
             </thead>
            <tbody>
-          <% @loadboards.each do |loadboard| %>
-            <tr>
-              <td><%= loadboard.company %></td>
-              <td><%= loadboard.dispatcher %></td>
-              <td><%= loadboard.driver %></td>
-              <td><%= loadboard.truck %></td>
-              <td><%= loadboard.load_type %></td>
-              <td><%= loadboard.trailer %></td>
-            </tr>
-          <% end %>
+             
+           <% @loadboards.each do |loadboard| %>
+             <tr>
+               <td><%= loadboard.company %></td>
+               <td><%= loadboard.dispatcher %></td>
+               <td><%= loadboard.driver %></td>
+               <td><%= loadboard.truck %></td>
+               <td><%= loadboard.load_type %></td>
+               <td><%= loadboard.trailer %></td>
+             </tr>
+           <% end %>
+    
           </tbody>
         </table>
         </div>
@@ -45,7 +47,10 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse">
       <div class="panel-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, adipisci, quibusdam, minima ratione voluptas quidem porro sint nobis odio cupiditate alias nisi. Magnam et fugiat labore eum at adipisci ex.
+
+        <h2>Load Entry</h2>
+        
+
       </div>
     </div>
   </div>
