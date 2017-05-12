@@ -16,4 +16,4 @@
 !/log/.keep
 /tmp
 config/database.yml
-config/environment/development.rb
+config/environments/development.rb
