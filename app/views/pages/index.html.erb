@@ -34,8 +34,30 @@
     </div>
   </div>
 </div>
+<!--Sidebar-->
+<div id="menu">
+  <ul>
+    <li>Home</li>
+    <li>Works</li>
+    <li>Services</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+</div>
 
+<div id="trigger"> Click Here! </div>
+<script>
+$("#trigger").click(function() {
+  $("#menu").toggleClass("active");
+});
 
+$("#trigger").click(function() {
+  $("#trigger").toggleClass("active");
+});
+</script>
+<!--Sidebar End-->
+
+<!--Bottom Panel-->
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -48,7 +70,7 @@
     <div id="collapseOne" class="panel-collapse collapse">
       <div class="panel-body">
 
-        <h2>Load Entry</h2>
+        <%= render '/components/loadboard_form' %>
         
 
       </div>
@@ -70,3 +92,5 @@ $('#collapseOne').on('hide.bs.collapse', function () {
 })
   
 </script>
+
+<!--Bottom Panel End-->

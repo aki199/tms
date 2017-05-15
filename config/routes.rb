@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 root 'pages#index'
-
+resources :loadboards
 
   get '/user/:id' => 'pages#users'
   get '/drivers' => 'pages#drivers'

@@ -1,0 +1,34 @@
+<%= form_for(@newLoadboard) do |f| %>
+
+<div class="row">
+    <div class="col-xs-2">
+        <%= f.label :company %><br />
+        <%= f.text_field :company, autofocus: true %>
+    </div>
+    <div class="col-xs-2">
+        <%= f.label :dispatcher %><br />
+        <%= f.text_field :dispatcher %>
+    </div>
+    <div class="col-xs-2">
+        <%= f.label :driver %><br />
+        <%= f.text_field :driver %>
+    </div>
+    <div class="col-xs-2">
+        <%= f.label :truck %><br />
+        <%= f.text_field :truck %>
+    </div>
+    <div class="col-xs-2">
+        <%= f.label :type %><br />
+        <%= f.text_field :load_type %>
+    </div>
+    <div class="col-xs-2">
+        <%= f.label :trailer %><br />
+        <%= f.text_field :trailer %>
+    </div>
+</div>
+    
+    <div class="actions" style="padding-top: 10px">
+        <%= f.submit "Update" %>
+    </div>
+
+<% end %>
