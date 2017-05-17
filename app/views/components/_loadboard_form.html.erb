@@ -11,24 +11,25 @@
     </div>
     <div class="col-xs-2">
         <%= f.label :driver %><br />
-        <%= f.text_field :driver %>
+        <%= collection_select( :loadboard, :driver_id, Driver.all, :id, :name, {}, { :multiple => false}) %>
     </div>
+
     <div class="col-xs-2">
-        <%= f.label :truck %><br />
-        <%= f.text_field :truck %>
+        <%= f.label :truck %> #<br />
+        <%= collection_select( :loadboard, :truck_id, Truck.all, :id, :truck_number, {}, { :multiple => false}) %>
     </div>
     <div class="col-xs-2">
         <%= f.label :type %><br />
         <%= f.text_field :load_type %>
     </div>
     <div class="col-xs-2">
-        <%= f.label :trailer %><br />
-        <%= f.text_field :trailer %>
+        <%= f.label :trailer %> #<br />
+        <%= collection_select( :loadboard, :trailer_id, Trailer.all, :id, :trailer_number, {}, { :multiple => false}) %>
     </div>
-</div>
+    </div>
     
     <div class="actions" style="padding-top: 10px">
-        <%= f.submit "Update" %>
+        <%= f.submit "Add" %>
     </div>
 
 <% end %>

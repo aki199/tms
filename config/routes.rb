@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
 root 'pages#index'
 resources :loadboards
+resources :drivers
+resources :trucks
+resources :trailers
 
   get '/user/:id' => 'pages#users'
   get '/drivers' => 'pages#drivers'

@@ -10,18 +10,77 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512191259) do
+ActiveRecord::Schema.define(version: 20170517231956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "customers", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dispatchers", force: :cascade do |t|
+    t.string "username"
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "drivers", force: :cascade do |t|
+    t.string "name"
+    t.string "driver_type"
+    t.string "phone"
+    t.string "email"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "loadboards", force: :cascade do |t|
     t.string "company"
     t.string "dispatcher"
-    t.string "driver"
-    t.string "truck"
     t.string "load_type"
-    t.string "trailer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "driver_id"
+    t.integer "truck_id"
+    t.integer "trailer_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "city"
+    t.string "zip"
+    t.string "state"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trailers", force: :cascade do |t|
+    t.string "trailer_number"
+    t.string "trailer_type"
+    t.string "license_plate"
+    t.string "plate_expiry"
+    t.string "inspection_expiration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trucks", force: :cascade do |t|
+    t.string "truck_number"
+    t.string "truck_type"
+    t.string "license_plate"
+    t.string "plate_expiry"
+    t.string "inspection_expiration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

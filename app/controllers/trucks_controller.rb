@@ -1,12 +1,12 @@
-class LoadboardsController < ApplicationController
+class TrucksController < ApplicationController
     def new
-       @loadboard = Loadboard.new
+       @truck = Truck.new
     end
     
     def create
-        @loadboard = Loadboard.new(post_params)
+        @truck = Truck.new(post_params)
         respond_to do |f|
-            if (@loadboard.save)
+            if (@truck.save)
                 f.html { redirect_to "", notice: "Post created!" }
             else
                 f.html { redirect_to "", notice: "Error: Post Not Saved." }
@@ -16,6 +16,7 @@ class LoadboardsController < ApplicationController
     
     private
     def post_params
-        params.require(:loadboard).permit(:company, :dispatcher, :driver_id, :truck_id, :load_type, :trailer_id)
+        params.require(:truck).permit(:truck_number, :truck_type, :license_plate, :plate_expiry, :inspection_expiration)
     end
 end
+

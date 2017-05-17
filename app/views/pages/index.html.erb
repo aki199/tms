@@ -16,15 +16,14 @@
             </tr>
             </thead>
            <tbody>
-             
-           <% @loadboards.each do |loadboard| %>
+           <% @loadboards.each_with_index do |loadboard| %>
              <tr>
                <td><%= loadboard.company %></td>
                <td><%= loadboard.dispatcher %></td>
-               <td><%= loadboard.driver %></td>
-               <td><%= loadboard.truck %></td>
+               <td><%= loadboard.driver.name %></td>
+               <td><%= loadboard.truck.truck_number %></td>
                <td><%= loadboard.load_type %></td>
-               <td><%= loadboard.trailer %></td>
+               <td><%= loadboard.trailer.trailer_number %></td>
              </tr>
            <% end %>
     
@@ -34,28 +33,36 @@
     </div>
   </div>
 </div>
-<!--Sidebar-->
-<div id="menu">
-  <ul>
-    <li>Home</li>
-    <li>Works</li>
-    <li>Services</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
+
+
+<!--Add Driver-->
+
+
+<div id="openModal1" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Add a driver</h2>
+    <%= render '/components/driver_form' %>
+  
+  </div>
 </div>
 
-<div id="trigger"> Click Here! </div>
-<script>
-$("#trigger").click(function() {
-  $("#menu").toggleClass("active");
-});
+<div id="openModal2" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Add a truck</h2>
+    <%= render '/components/truck_form' %>
+</div>
+</div>
 
-$("#trigger").click(function() {
-  $("#trigger").toggleClass("active");
-});
-</script>
-<!--Sidebar End-->
+<div id="openModal3" class="modalDialog">
+<div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Add a trailer</h2>
+    <%= render '/components/trailer_form' %>
+</div>
+</div>
+
 
 <!--Bottom Panel-->
 <div class="panel-group" id="accordion">

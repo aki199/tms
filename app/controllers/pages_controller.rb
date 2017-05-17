@@ -5,6 +5,9 @@ class PagesController < ApplicationController
   def index
       @loadboards = Loadboard.order(sort_column_comp + " " + sort_direction)
       @newLoadboard = Loadboard.new
+      @newDriver = Driver.new
+      @newTruck = Truck.new
+      @newTrailer = Trailer.new
 
   end
   
@@ -21,7 +24,6 @@ class PagesController < ApplicationController
     else
       redirect_to root_path, :notice=> "User not found!"
     end
-    
   end
 
   def drivers
